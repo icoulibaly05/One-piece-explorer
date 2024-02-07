@@ -2,15 +2,38 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API One Piece</title>
+    <title>Lieux One Piece</title>
+    <link rel="stylesheet" href="style.css">
     <script src="lieux.js" defer></script>
+    <script src="carousel.js" defer></script>
 </head>
 <body>
-    <h1>Utilisation de l'API One Piece</h1>
-    <button onclick="recupererLocalisations()">Récupérer toutes les localisations</button>
-    <button onclick="recupererLocalisationParId(1)">Récupérer la localisation ID 1</button>
-    <button onclick="rechercherLocalisations('Grand Line')">Rechercher 'Grand Line'</button>
-    <button onclick="recupererNombreLocalisations()">Récupérer le nombre de localisations</button>
+    <header>
+        <div class="banner">
+            <!-- Assurez-vous que le chemin de l'image est correct -->
+            <img src="image/baniere.png" alt="One Piece Banner">
+        </div>
+    </header>
+
+    <div class="carousel-container">
+        <div id="carousel" class="carousel">
+            <!-- Les éléments du carrousel seront injectés ici par JavaScript -->
+        </div>
+    </div>
+
+    <!-- Ajout des contrôles pour la recherche et l'affichage des lieux -->
+    <div class="controls">
+        <button onclick="recupererLieux()">Afficher tous les lieux</button>
+        <div class="search-container">
+            <input type="text" id="searchBar" placeholder="Rechercher une mer (ex: East Blue)">
+            <button onclick="rechercherLieux()">Recherche</button>
+        </div>
+    </div>
+
+    <div id="lieuxResultats"></div> <!-- Conteneur pour les résultats des lieux -->
+
+    <footer>
+        <p>© 2024 One Piece Explorer. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
