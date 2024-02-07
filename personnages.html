@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Personnages One Piece</title>
+    <link rel="stylesheet" href="style.css">
     <script src="personnages.js" defer></script>
+    <script src="carousel-personnages.js" defer></script>
 </head>
 <body>
-    <h1>API des Personnages One Piece</h1>
-    <button onclick="recupererPersonnages()">Récupérer tous les personnages</button>
-    <button onclick="recupererPersonnagesEquipage(1)">Récupérer personnages de l'équipage du Chapeau de Paille</button>
+    <header>
+        <div class="banner">
+            <img src="image/banner.jpg" alt="One Piece Banner">
+        </div>
+    </header>
 
-    <div id="resultats"></div> <!-- Conteneur pour les résultats -->
+    <div class="carousel-container">
+        <div id="carouselPersonnages" class="carousel">
+            <!-- Les éléments du carrousel seront injectés ici par JavaScript -->
+        </div>
+    </div>
+
+    <div class="controls">
+        <button onclick="recupererPersonnages()">Afficher tous les personnages</button>
+        <button onclick="recupererEquipageChapeauxDePaille()">Équipage du Chapeau de Paille</button>
+    </div>
+
+    <div id="resultats"></div> <!-- Conteneur pour les résultats des personnages -->
+
+    <footer>
+        <p>© 2024 One Piece Explorer. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
