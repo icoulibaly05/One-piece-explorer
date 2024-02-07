@@ -1,43 +1,132 @@
+/* Style général */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Couleur de fond légère */
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
 }
 
+h1, h2 {
+    color: #007bff; /* Bleu principal */
+}
+
+p {
+    color: #333; /* Gris foncé pour le texte */
+}
+
+/* Style de la bannière */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #fff; /* Blanc */
+    border-bottom: 5px solid #007bff; /* Bordure bleue en bas de la bannière */
+    padding: 10px 0;
     text-align: center;
-    padding: 10px;
 }
 
+.banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation */
 nav ul {
-    list-style: none;
-    margin: 0;
+    list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
-nav li {
+nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #007bff;
     font-weight: bold;
 }
 
-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
+nav a:hover {
+    text-decoration: underline;
 }
 
+/* Style du carrousel */
+.carousel-container {
+    max-width: 600px;
+    margin: 20px auto 40px; /* Ajout d'une marge en bas pour éviter que les contenus suivants soient cachés */
+    overflow: hidden;
+}
+
+.carousel .slide {
+    display: none;
+    text-align: center;
+}
+
+.carousel .slide.active {
+    display: block;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style des informations (personnages, lieux) */
+.personnage-info, .lieu-info {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Style des contrôles (boutons, barre de recherche) */
+.controls {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Style du pied de page */
 footer {
-    background-color: #333;
+    background-color: #007bff;
     color: #fff;
     text-align: center;
+    padding: 10px 0;
+    position: relative; /* Modifiez en 'fixed' pour le positionner en bas de la page */
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Style des boutons */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Bleu un peu plus foncé */
+}
+
+/* Barre de recherche */
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#searchBar {
     padding: 10px;
+    width: 250px; /* Ajustez selon la largeur souhaitée */
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    margin-right: 10px;
 }
