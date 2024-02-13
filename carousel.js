@@ -1,25 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const carouselContainer = document.getElementById('carousel');
+    const carouselButtonsContainer = document.getElementById('carouselButtons');
+    const buttons = [
+        { image: 'image/fruit/1.png', text: 'Fruits du Démon', href: 'fruits.html' },
+        { image: 'image/prime/1.jpg', text: 'Personnages', href: 'personnages.html' },
+        { image: 'image/lieux/1.jpg', text: 'Lieux', href: 'lieux.html' }, // Assurez-vous que c'est correctement inclus
+        // Ajoutez d'autres boutons ici si nécessaire
+    ];
 
-    for (let i = 1; i <= 5; i++) {
+    buttons.forEach(button => {
         const slide = document.createElement('div');
-        slide.className = 'slide';
+        slide.className = 'carousel-slide';
+
         const image = document.createElement('img');
-        image.src = `image/lieux/${i}.jpg`;
-        image.alt = `Carousel Image ${i}`;
+        image.src = button.image;
+        image.alt = button.text;
+        image.style.width = '400px'; // Exemple de largeur fixe
+        image.style.height = '350px'; // Exemple de hauteur fixe
         slide.appendChild(image);
-        carouselContainer.appendChild(slide);
-    }
 
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
+        const link = document.createElement('a');
+        link.href = button.href;
+        link.textContent = button.text;
+        link.className = 'carousel-button';
+        slide.appendChild(link);
 
-    function showNextSlide() {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
-    }
-
-    slides[currentSlide].classList.add('active');
-    setInterval(showNextSlide, 5000);
+        carouselButtonsContainer.appendChild(slide);
+    });
 });

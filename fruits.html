@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fruits du Démon - One Piece</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="fruit.js" defer></script>
+    <script src="carousel_fruit.js" defer></script> <!-- Ajout du script carrousels.js -->
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="image/baniere.png" alt="One Piece Banner">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="acceuil.html">Accueil</a></li>
+                <li><a href="personnages.html" class="active">Personnages</a></li>
+                <li><a href="lieux.html">Lieux</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Ajout du conteneur du carrousel -->
+    <div id="carouselFruits" class="carousel-container">
+        <!-- Les éléments du carrousel seront injectés ici par carrousels.js -->
+    </div>
+
+    <div class="controls">
+        <button onclick="recupererTousLesFruits()">Afficher tous les fruits</button>
+        <button onclick="recupererNombreDeFruits()">Nombre de fruits</button>
+        <button onclick="recupererZoanMythiques()">Zoan Mythiques</button>
+    </div>
+
+    <div id="resultats"></div> <!-- Conteneur pour les résultats -->
+
+    <footer>
+        <p>© 2024 One Piece Explorer. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
