@@ -1,75 +1,76 @@
+[09:24] Imran Abdoulaye COULIBALY
 /* Style général */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff; /* Couleur de fond légère */
+    background-color: #000; /* Couleur de fond légère */
     margin: 0;
     padding: 0;
 }
-
+ 
 h1, h2 {
     color: #007bff; /* Bleu principal */
 }
-
+ 
 p {
-    color: #333; /* Gris foncé pour le texte */
+    color: #007bff; /* Gris foncé pour le texte */
 }
-
+ 
 /* Style de la bannière */
 header {
-    background-color: #fff; /* Blanc */
+    background-color: #000; /* Blanc */
     border-bottom: 5px solid #007bff; /* Bordure bleue en bas de la bannière */
     padding: 10px 0;
     text-align: center;
 }
-
+ 
 .banner img {
     max-width: 100%;
     height: auto;
 }
-
+ 
 /* Navigation */
 nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
 }
-
+ 
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
-
+ 
 nav a {
     text-decoration: none;
     color: #007bff;
     font-weight: bold;
 }
-
+ 
 nav a:hover {
     text-decoration: underline;
 }
-
+ 
 /* Style du carrousel */
 .carousel-container {
     max-width: 600px;
     margin: 20px auto 40px; /* Ajout d'une marge en bas pour éviter que les contenus suivants soient cachés */
     overflow: hidden;
 }
-
+ 
 .carousel .slide {
     display: none;
     text-align: center;
 }
-
+ 
 .carousel .slide.active {
     display: block;
 }
-
+ 
 .slide img {
     max-width: 100%;
     height: auto;
 }
-
+ 
 /* Style des informations (personnages, lieux) */
 .personnage-info, .lieu-info {
     background-color: #fff;
@@ -79,28 +80,28 @@ nav a:hover {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
+ 
 /* Style des contrôles (boutons, barre de recherche) */
 .controls {
     text-align: center;
     margin: 20px 0;
 }
-
+ 
 /* Style du pied de page */
 footer {
     background-color: #007bff;
-    color: #fff;
+    color: #000;
     text-align: center;
     padding: 10px 0;
     position: relative; /* Modifiez en 'fixed' pour le positionner en bas de la page */
     bottom: 0;
     width: 100%;
 }
-
+ 
 footer p {
     margin: 0;
 }
-
+ 
 /* Style des boutons */
 button {
     background-color: #007bff;
@@ -112,17 +113,17 @@ button {
     cursor: pointer;
     font-size: 16px;
 }
-
+ 
 button:hover {
     background-color: #0056b3; /* Bleu un peu plus foncé */
 }
-
+ 
 /* Barre de recherche */
 .search-container {
     text-align: center;
     margin: 20px 0;
 }
-
+ 
 #searchBar {
     padding: 10px;
     width: 250px; /* Ajustez selon la largeur souhaitée */
@@ -130,3 +131,81 @@ button:hover {
     border: 1px solid #007bff;
     margin-right: 10px;
 }
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+ 
+  .carousel-item {
+    flex: 0 0 auto;
+    position: relative;
+    scroll-snap-align: start;
+    text-align: center;
+  }
+ 
+  #item1 img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+  }
+ 
+  #item2 img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+  }
+ 
+  #item3 img {
+    width: 220px;
+    height: 170px;
+    object-fit: cover;
+  }
+ 
+  .carousel-button {
+    margin-top: 10px;
+    /* Stylez votre bouton ici */
+  }
+  #carouselButtons {
+    display: flex; /* Affiche les éléments du carrousel côte à côte */
+    overflow-x: auto; /* Permet de faire défiler horizontalement si nécessaire */
+  }
+ 
+  .carousel-slide {
+    margin-right: 20px; /* Ajoute un peu d'espace entre chaque élément */
+  }
+  #carouselButtons {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    overflow-x: auto;
+    flex-wrap: nowrap; /* Empêche les éléments de passer à la ligne suivante */
+  }
+ 
+  .carousel-slide {
+    margin: 0 10px; /* Ajoute un espacement horizontal autour de chaque slide */
+    text-align: center; /* Centre le contenu (image et bouton) à l'intérieur de chaque slide */
+  }
+ 
+  .carousel-slide img {
+    max-width: 100%; /* Assure que l'image ne dépasse pas son conteneur */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+    display: block; /* Élimine l'espace blanc sous l'image */
+    margin: 0 auto; /* Centre l'image horizontalement dans son conteneur */
+  }
+  .carousel-button {
+    padding: 10px 20px; /* Ajuste la taille du bouton */
+    border: 1px solid #000; /* Encadre le bouton avec une bordure noire */
+    background-color: #fff; /* Définit la couleur d'arrière-plan du bouton */
+    color: #000; /* Définit la couleur du texte du bouton */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    font-size: 16px; /* Ajuste la taille de la police */
+    border-radius: 5px; /* Adoucit les coins du bouton */
+    margin-top: 10px; /* Espace entre l'image et le bouton */
+    display: inline-block; /* Permet d'appliquer des marges et du padding */
+    cursor: pointer; /* Change le curseur en main lorsque vous survolez le bouton */
+  }
+ 
+  .carousel-button:hover {
+    background-color: #f2f2f2; /* Change la couleur de fond au survol */
+  }
+   
