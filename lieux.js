@@ -1,5 +1,3 @@
-// lieux.js
-
 // URL de base pour l'API des lieux One Piece
 const baseURLLieux = "https://api.api-onepiece.com/v2/locates/fr";
 
@@ -20,9 +18,7 @@ const merAId = {
 function recupererLieux() {
     fetch(`${baseURLLieux}`)
         .then(response => response.json())
-        .then(data => {
-            afficherLieux(data);
-        })
+        .then(data => afficherLieux(data))
         .catch(error => {
             document.getElementById('lieuxResultats').innerHTML = `Erreur lors de la récupération des lieux : ${error}`;
         });
@@ -30,19 +26,24 @@ function recupererLieux() {
 
 // Fonction pour rechercher des lieux par mer et afficher les ID correspondants
 function rechercherLieux() {
-    const merRecherchee = document.getElementById('searchBar').value.trim();
-    const plageId = merAId[merRecherchee];
+    const merRecherchee = document.getElementById('searchBar').value.trim().toLowerCase();
+
+    // Trouver la plage d'ID en convertissant les clés en minuscules pour la comparaison
+    const plageId = Object.keys(merAId).reduce((acc, key) => {
+        if (key.toLowerCase() === merRecherchee) {
+            acc = merAId[key];
+        }
+        return acc;
+    }, null);
 
     if (!plageId) {
         document.getElementById('lieuxResultats').innerHTML = "Aucun lieu trouvé pour cette mer ou mer non reconnue.";
         return;
     }
 
-    // Faire une seule requête pour obtenir tous les lieux, puis filtrer localement
     fetch(`${baseURLLieux}`)
         .then(response => response.json())
         .then(data => {
-            // Filtrer les lieux par la plage d'ID pour la mer recherchée
             const lieuxFiltres = data.filter(lieu => lieu.id >= plageId.start && lieu.id <= plageId.end);
             afficherLieux(lieuxFiltres);
         })

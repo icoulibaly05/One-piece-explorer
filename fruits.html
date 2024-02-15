@@ -5,7 +5,7 @@
     <title>Fruits du Démon - One Piece</title>
     <link rel="stylesheet" href="style.css">
     <script src="fruit.js" defer></script>
-    <script src="carousel_fruit.js" defer></script> <!-- Ajout du script carrousels.js -->
+    <script src="carousel-fruit.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,18 +21,18 @@
         </nav>
     </header>
 
-    <!-- Ajout du conteneur du carrousel -->
-    <div id="carouselFruits" class="carousel-container">
-        <!-- Les éléments du carrousel seront injectés ici par carrousels.js -->
+    <div id="carouselFruits" class="carousel-container"></div>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Recherchez Paramecia, Logia, Zoan, Zoan Antique, Zoan Mythiques...">
+        <button id="searchButton">Recherche</button>
     </div>
 
     <div class="controls">
-        <button onclick="recupererTousLesFruits()">Afficher tous les fruits</button>
-        <button onclick="recupererNombreDeFruits()">Nombre de fruits</button>
-        <button onclick="recupererZoanMythiques()">Zoan Mythiques</button>
+        <button id="boutonTousLesFruits">Afficher tous les fruits</button>
     </div>
 
-    <div id="resultats"></div> <!-- Conteneur pour les résultats -->
+    <div id="resultats"></div>
 
     <footer>
         <p>© 2024 One Piece Explorer. Tous droits réservés.</p>

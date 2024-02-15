@@ -9,11 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const image = document.createElement('img');
         // Utilisez un chemin d'accès différent ou un nom différent pour distinguer les images des personnages
-        image.src = `image/prime/${i}.jpg`; 
-        image.alt = `Personnage Image ${i}`;
+        image.src = `image/fruit/${i}.png`; 
+        image.alt = `Fruit Image ${i}`;
         image.style.display = 'block'; // Rend l'image comme un bloc
         image.style.marginLeft = 'auto'; // Marge gauche automatique pour centrer
         image.style.marginRight = 'auto'; // Marge droite automatique pour centrer
+        image.style.width = '400px'; // Largeur fixe pour toutes les images
+        image.style.height = '350px'; // Hauteur fixe pour toutes les images
+        image.style.objectFit = 'cover'; // Garde le ratio d'aspect mais coupe l'image si nécessaire
 
         slide.appendChild(image);
         carouselContainer.appendChild(slide);
