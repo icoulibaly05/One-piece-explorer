@@ -1,23 +1,22 @@
-/* Style général */
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Couleur de fond légère */
+    background-color: #ffffff; 
     margin: 0;
     padding: 0;
 }
 
 h1, h2 {
-    color: #007bff; /* Bleu principal */
+    color: #007bff; 
 }
 
 p {
-    color: #007bff; /* Gris foncé pour le texte */
+    color: #007bff; 
 }
 
-/* Style de la bannière */
+
 header {
-    background-color: #000; /* Blanc */
-    border-bottom: 5px solid #007bff; /* Bordure bleue en bas de la bannière */
+    background-color: #000;
+    border-bottom: 5px solid #007bff;
     padding: 10px 0;
     text-align: center;
 }
@@ -27,7 +26,6 @@ header {
     height: auto;
 }
 
-/* Navigation */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -49,10 +47,9 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Style du carrousel */
 .carousel-container {
     max-width: 600px;
-    margin: 20px auto 40px; /* Ajout d'une marge en bas pour éviter que les contenus suivants soient cachés */
+    margin: 20px auto 40px;
     overflow: hidden;
 }
 
@@ -70,7 +67,6 @@ nav a:hover {
     height: auto;
 }
 
-/* Style des informations (personnages, lieux) */
 .personnage-info, .lieu-info {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -80,7 +76,6 @@ nav a:hover {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Style des contrôles (boutons, barre de recherche) */
 .controls {
     text-align: center;
     margin: 20px 0;
@@ -88,10 +83,10 @@ nav a:hover {
 
 footer {
     background-color: #000;
-    color: #fff; /* Changez la couleur du texte en blanc */
+    color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: relative; /* Modifiez en 'fixed' pour le positionner en bas de la page si nécessaire */
+    position: relative;
     bottom: 0;
     width: 100%;
 }
@@ -100,7 +95,6 @@ footer p {
     margin: 0;
 }
 
-/* Style des boutons */
 button {
     background-color: #007bff;
     color: #fff;
@@ -113,10 +107,9 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3; /* Bleu un peu plus foncé */
+    background-color: #0056b3;
 }
 
-/* Barre de recherche */
 .search-container {
     text-align: center;
     margin: 20px 0;
@@ -124,7 +117,7 @@ button:hover {
 
 #searchBar {
     padding: 10px;
-    width: 250px; /* Ajustez selon la largeur souhaitée */
+    width: 250px;
     border-radius: 5px;
     border: 1px solid #007bff;
     margin-right: 10px;
@@ -162,90 +155,87 @@ button:hover {
   
   .carousel-button {
     margin-top: 10px;
-    /* Stylez votre bouton ici */
-  }
-  #carouselButtons {
-    display: flex; /* Affiche les éléments du carrousel côte à côte */
-    overflow-x: auto; /* Permet de faire défiler horizontalement si nécessaire */
-  }
-  
-  .carousel-slide {
-    margin-right: 20px; /* Ajoute un peu d'espace entre chaque élément */
+ 
   }
   #carouselButtons {
     display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
     overflow-x: auto;
-    flex-wrap: nowrap; /* Empêche les éléments de passer à la ligne suivante */
   }
   
   .carousel-slide {
-    margin: 0 10px; /* Ajoute un espacement horizontal autour de chaque slide */
-    text-align: center; /* Centre le contenu (image et bouton) à l'intérieur de chaque slide */
+    margin-right: 20px;
+  }
+  #carouselButtons {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+  
+  .carousel-slide {
+    margin: 0 10px;
+    text-align: center;
   }
   
   .carousel-slide img {
-    max-width: 100%; /* Assure que l'image ne dépasse pas son conteneur */
-    height: auto; /* Maintient le ratio d'aspect de l'image */
-    display: block; /* Élimine l'espace blanc sous l'image */
-    margin: 0 auto; /* Centre l'image horizontalement dans son conteneur */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
   .carousel-button {
-    padding: 10px 20px; /* Ajuste la taille du bouton */
-    border: 1px solid #000; /* Encadre le bouton avec une bordure noire */
-    background-color: #fff; /* Définit la couleur d'arrière-plan du bouton */
-    color: #000; /* Définit la couleur du texte du bouton */
-    text-decoration: none; /* Supprime le soulignement du lien */
-    font-size: 16px; /* Ajuste la taille de la police */
-    border-radius: 5px; /* Adoucit les coins du bouton */
-    margin-top: 10px; /* Espace entre l'image et le bouton */
-    display: inline-block; /* Permet d'appliquer des marges et du padding */
-    cursor: pointer; /* Change le curseur en main lorsque vous survolez le bouton */
+    padding: 10px 20px;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+    cursor: pointer;
   }
   
   .carousel-button:hover {
-    background-color: #f2f2f2; /* Change la couleur de fond au survol */
+    background-color: #f2f2f2;
   }
   .welcome-container {
-    text-align: center; /* Centre le texte horizontalement */
-    margin: auto; /* Centre le conteneur (si nécessaire) */
-    padding: 20px 0; /* Ajoute un peu d'espace au-dessus et en dessous du texte */
+    text-align: center;
+    margin: auto;
+    padding: 20px 0;
 }
 img {
-    display: block; /* Les images sont rendues comme des blocs */
-    margin-left: auto; /* Marge gauche automatique pour centrer */
-    margin-right: auto; /* Marge droite automatique pour centrer */
-    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
 }
-/* Style du conteneur du carrousel */
+
 .carousel-container {
-    text-align: center; /* Centre le contenu du carrousel */
-    width: 100%; /* Assure que le conteneur prend toute la largeur */
-    overflow: hidden; /* Cache les éléments débordant du conteneur */
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
 }
 
-/* Style des éléments du carrousel */
 .carousel {
-    display: flex; /* Affiche les éléments du carrousel en ligne */
-    justify-content: center; /* Centre les éléments du carrousel horizontalement */
-    align-items: center; /* Centre les éléments du carrousel verticalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Style des diapositives du carrousel */
 .slide {
-    margin: 0 5px; /* Ajoute un peu d'espace autour de chaque diapositive */
+    margin: 0 5px;
 }
 
-/* Style des images à l'intérieur des diapositives */
 .slide img {
-    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de la diapositive */
-    height: auto; /* Maintient le ratio d'aspect de l'image */
+    max-width: 100%;
+    height: auto;
 }
 .technique-info {
-    background-color: #fff; /* Fond blanc pour chaque technique */
-    border: 1px solid #ddd; /* Bordure légère */
-    padding: 15px; /* Espacement à l'intérieur de chaque encadré */
-    margin-bottom: 20px; /* Espacement entre chaque encadré */
-    border-radius: 5px; /* Bords arrondis pour un look moderne */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre légère pour un effet de profondeur */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
