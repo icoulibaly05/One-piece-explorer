@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = [
         { image: 'image/fruit/2.png', text: 'Fruits du Démon', href: 'fruits.html' },
         { image: 'image/prime/1.jpg', text: 'Personnages', href: 'personnages.html' },
-        { image: 'image/lieux/1.jpg', text: 'Lieux', href: 'lieux.html' }, // Assurez-vous que c'est correctement inclus
-        // Ajoutez d'autres boutons ici si nécessaire
+        { image: 'image/lieux/1.jpg', text: 'Lieux', href: 'lieux.html' }, 
+        { image: 'image/ACE.jpg', text: 'Techniques', href: 'techniques.html' }
     ];
 
     buttons.forEach(button => {
