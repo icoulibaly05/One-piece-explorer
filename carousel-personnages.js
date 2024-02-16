@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const carouselContainer = document.getElementById('carouselPersonnages');
 
-    // Exemple avec 48 images différentes pour les personnages
+    
     for (let i = 1; i <= 48; i++) {
         const slide = document.createElement('div');
         slide.className = 'slide';
-        slide.style.textAlign = 'center'; // Centre le contenu du slide
+        slide.style.textAlign = 'center'; 
 
         const image = document.createElement('img');
-        // Utilisez un chemin d'accès différent ou un nom différent pour distinguer les images des personnages
+        
         image.src = `image/prime/${i}.jpg`; 
         image.alt = `Personnage Image ${i}`;
-        image.style.display = 'block'; // Rend l'image comme un bloc
-        image.style.marginLeft = 'auto'; // Marge gauche automatique pour centrer
-        image.style.marginRight = 'auto'; // Marge droite automatique pour centrer
+        image.style.display = 'block'; 
+        image.style.marginLeft = 'auto'; 
+        image.style.marginRight = 'auto'; 
 
         slide.appendChild(image);
         carouselContainer.appendChild(slide);
