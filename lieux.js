@@ -1,7 +1,5 @@
-// URL de base pour l'API des lieux One Piece
 const baseURLLieux = "https://api.api-onepiece.com/v2/locates/fr";
 
-// Mappage des noms des mers aux plages d'ID
 const merAId = {
     "East Blue": { start: 1, end: 19 },
     "West Blue": { start: 20, end: 24 },
@@ -11,10 +9,8 @@ const merAId = {
     "Calm Belt": { start: 43, end: 45 },
     "Paradis": { start: 46, end: 67 },
     "Shin Sekai": { start: 68, end: 88 },
-    // "NomDeLaMer": { start: IDDeDébut, end: IDDeFin },
 };
 
-// Fonction pour récupérer et afficher tous les lieux
 function recupererLieux() {
     fetch(`${baseURLLieux}`)
         .then(response => response.json())
@@ -24,11 +20,9 @@ function recupererLieux() {
         });
 }
 
-// Fonction pour rechercher des lieux par mer et afficher les ID correspondants
 function rechercherLieux() {
     const merRecherchee = document.getElementById('searchBar').value.trim().toLowerCase();
 
-    // Trouver la plage d'ID en convertissant les clés en minuscules pour la comparaison
     const plageId = Object.keys(merAId).reduce((acc, key) => {
         if (key.toLowerCase() === merRecherchee) {
             acc = merAId[key];
@@ -52,10 +46,9 @@ function rechercherLieux() {
         });
 }
 
-// Fonction pour afficher les lieux dans le conteneur
 function afficherLieux(lieux) {
     const conteneurLieux = document.getElementById('lieuxResultats');
-    conteneurLieux.innerHTML = ''; // Efface les résultats précédents
+    conteneurLieux.innerHTML = '';
 
     lieux.forEach(lieu => {
         conteneurLieux.innerHTML += `
