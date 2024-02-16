@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const allTechniquesButton = document.getElementById('allTechniques');
     const resultContainer = document.getElementById('techniquesResultats');
 
-    // Fonction pour afficher les techniques
+ 
     const displayTechniques = (techniques) => {
-        resultContainer.innerHTML = ''; // Vide le conteneur de résultats
+        resultContainer.innerHTML = '';
         techniques.forEach(item => {
             const div = document.createElement('div');
             div.classList.add('technique-info');
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Gestion du clic sur le bouton Gear
+    
     gearButton.addEventListener('click', () => {
         fetch('https://api.api-onepiece.com/v2/luffy-gears/fr')
             .then(response => response.json())
@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
-    // Gestion du clic sur le bouton Haki
     hakiButton.addEventListener('click', () => {
         fetch('https://api.api-onepiece.com/v2/hakis/fr')
             .then(response => response.json())
@@ -38,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
-    // Gestion du clic sur le bouton Toutes les techniques
     allTechniquesButton.addEventListener('click', () => {
         Promise.all([
             fetch('https://api.api-onepiece.com/v2/luffy-gears/fr').then(response => response.json()),
