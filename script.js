@@ -16,7 +16,7 @@ function recupererEquipageChapeauxDePaille() {
         .then(response => response.json())
         .then(data => {
             afficherPersonnages(data);
-            afficherPhotoEquipage(); // Affiche la photo de l'équipage
+            afficherPhotoEquipage();
         })
         .catch(error => {
             document.getElementById('resultats').innerHTML = `Erreur lors de la récupération de l'équipage : ${error}`;
@@ -47,7 +47,7 @@ function afficherPhotoEquipage() {
     conteneurPhoto.innerHTML = '';
 
     const image = document.createElement('img');
-    image.src = 'image/Equipage.jpg'; // Assurez-vous que le chemin est correct
+    image.src = 'image/Equipage.jpg';
     image.alt = 'Équipage du Chapeau de Paille';
     image.style.display = 'block';
     image.style.marginLeft = 'auto';
@@ -56,7 +56,6 @@ function afficherPhotoEquipage() {
     conteneurPhoto.appendChild(image);
 }
 
-// Code pour le carousel des personnages
 document.addEventListener('DOMContentLoaded', () => {
     const carouselContainer = document.getElementById('carouselPersonnages');
 
