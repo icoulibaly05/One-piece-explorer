@@ -241,3 +241,11 @@ img {
     max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de la diapositive */
     height: auto; /* Maintient le ratio d'aspect de l'image */
 }
+.technique-info {
+    background-color: #fff; /* Fond blanc pour chaque technique */
+    border: 1px solid #ddd; /* Bordure légère */
+    padding: 15px; /* Espacement à l'intérieur de chaque encadré */
+    margin-bottom: 20px; /* Espacement entre chaque encadré */
+    border-radius: 5px; /* Bords arrondis pour un look moderne */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre légère pour un effet de profondeur */
+}

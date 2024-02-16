@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <title>Techniques One Piece</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="image/icone.ico" type="image/x-icon">
+    <script src="techniques.js" defer></script>
     <script src="carousel-techniques.js" defer></script>
+    <link rel="icon" href="image/icone.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="banner">
-            <img src="image/baniere.png" alt="Bannière One Piece"> 
+            <img src="image/baniere.png" alt="Bannière One Piece">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="personnages.html">Personnages</a></li>
+                    <li><a href="lieux.html">Lieux</a></li>
+                    <li><a href="fruits.html">Fruits du Démons</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="personnages.html">Personnages</a></li>
-                <li><a href="lieux.html">Lieux</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Conteneur pour le carrousel -->
-    <div id="carousel" class="carousel-container">
-        <!-- Les slides du carrousel seront ajoutés ici par le script carousel-techniques.js -->
+    <div class="carousel-container">
+        <div id="carousel" class="carousel">
+            <!-- Les éléments du carrousel seront injectés ici par JavaScript -->
+        </div>
     </div>
 
     <div class="controls">
