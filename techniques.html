@@ -5,8 +5,8 @@
     <title>Techniques One Piece</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="image/icone.ico" type="image/x-icon">
-    <script src="techniques.js" defer></script> 
     <script src="carousel-techniques.js" defer></script>
+</head>
 <body>
     <header>
         <div class="banner">
@@ -21,10 +21,15 @@
         </nav>
     </header>
 
+    <!-- Conteneur pour le carrousel -->
+    <div id="carousel" class="carousel-container">
+        <!-- Les slides du carrousel seront ajoutés ici par le script carousel-techniques.js -->
+    </div>
+
     <div class="controls">
         <button id="gear">Gear</button>
         <button id="hakis">Hakis</button>
-        <button id="allTechniques">Toutes les techniques</button> <!-- Changé pour un seul bouton 'Toutes les techniques' -->
+        <button id="allTechniques">Toutes les techniques</button>
     </div>
 
     <div id="techniquesResultats">

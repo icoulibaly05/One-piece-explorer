@@ -1,26 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const carouselContainer = document.getElementById('carouselPersonnages');
+    const carouselContainer = document.getElementById('carousel');
+    if (!carouselContainer) {
+        console.error('Élément de carrousel non trouvé.');
+        return;
+    }
 
-    // Exemple avec 48 images différentes pour les personnages
-    for (let i = 1; i <= 48; i++) {
+    // Remplacez ceci par le nombre réel d'images dans le dossier 'techniques'
+    const numberOfImages = 10; // Supposons que vous ayez 10 images pour l'exemple
+    const imageFolder = 'image/gear/'; // Mettez à jour le chemin si nécessaire
+
+    for (let i = 1; i <= numberOfImages; i++) {
         const slide = document.createElement('div');
         slide.className = 'slide';
-        slide.style.textAlign = 'center'; // Centre le contenu du slide
-
         const image = document.createElement('img');
-        // Utilisez un chemin d'accès différent ou un nom différent pour distinguer les images des personnages
-        image.src = `image/prime/${i}.jpg`; 
-        image.alt = `Personnage Image ${i}`;
-        image.style.display = 'block'; // Rend l'image comme un bloc
-        image.style.marginLeft = 'auto'; // Marge gauche automatique pour centrer
-        image.style.marginRight = 'auto'; // Marge droite automatique pour centrer
-
+        image.src = ${imageFolder}${i}.png; // Assurez-vous que le format de l'image est correct (.jpg ici)
+        image.alt = Carousel Image ${i};
         slide.appendChild(image);
         carouselContainer.appendChild(slide);
     }
 
     let currentSlide = 0;
-    const slides = document.querySelectorAll('#carouselPersonnages .slide');
+    const slides = document.querySelectorAll('#carousel .slide');
 
     function showNextSlide() {
         slides[currentSlide].classList.remove('active');
@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[currentSlide].classList.add('active');
     }
 
-    slides[currentSlide].classList.add('active');
-    setInterval(showNextSlide, 2000);
+    // Initialiser le premier slide comme actif
+    if (slides.length > 0) {
+        slides[0].classList.add('active');
+        setInterval(showNextSlide, 5000); // Change le slide toutes les 5 secondes
+    }
 });
