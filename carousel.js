@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const image = document.createElement('img');
         image.src = button.image;
         image.alt = button.text;
-        image.style.width = '400px'; // Exemple de largeur fixe
-        image.style.height = '350px'; // Exemple de hauteur fixe
+        image.style.width = '400px'; 
+        image.style.height = '350px'; 
         slide.appendChild(image);
 
         const link = document.createElement('a');
