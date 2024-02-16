@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// Fonction pour récupérer et afficher tous les fruits
 function recupererTousLesFruits() {
     fetch("https://api.api-onepiece.com/v2/fruits/fr")
         .then(response => response.json())
@@ -50,10 +49,9 @@ function rechercherFruits() {
         });
 }
 
-// Fonction pour afficher les fruits dans le conteneur de résultats
 function afficherFruits(fruits) {
     const conteneur = document.getElementById('resultats');
-    conteneur.innerHTML = ''; // Effacer les résultats précédents
+    conteneur.innerHTML = ''; 
 
     fruits.forEach(fruit => {
         const fruitElement = document.createElement('div');
