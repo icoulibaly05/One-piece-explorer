@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const image = document.createElement('img');
         image.src = `image/gear/${i}.png`;
         image.alt = `Carousel Image ${i}`;
-        // Définissez la largeur et la hauteur souhaitées pour les images ici
-        image.style.width = '400px'; // Exemple de largeur fixe
-        image.style.height = '350px'; // Exemple de hauteur fixe
+        
+        image.style.width = '400px'; 
+        image.style.height = '350px'; 
         slide.appendChild(image);
         carouselContainer.appendChild(slide);
     }
