@@ -11,17 +11,18 @@ function recupererPersonnages() {
         });
 }
 
+
 function recupererEquipageChapeauxDePaille() {
     fetch(`${baseURL}/crew/1`) 
         .then(response => response.json())
         .then(data => {
             afficherPersonnages(data);
-            afficherPhotoEquipage(); // Affiche la photo de l'équipage
         })
         .catch(error => {
             document.getElementById('resultats').innerHTML = `Erreur lors de la récupération de l'équipage : ${error}`;
         });
 }
+
 
 function afficherPersonnages(personnages) {
     const conteneurPersonnages = document.getElementById('resultats');
@@ -41,26 +42,3 @@ function afficherPersonnages(personnages) {
         `;
     });
 }
-
-function afficherPhotoEquipage() {
-    const conteneurPhoto = document.getElementById('photoEquipage');
-    conteneurPhoto.innerHTML = '';
-
-    const image = document.createElement('img');
-    image.src = 'image/Equipage.jpg'; // Assurez-vous que le chemin est correct
-    image.alt = 'Équipage du Chapeau de Paille';
-    image.style.display = 'block';
-    image.style.marginLeft = 'auto';
-    image.style.marginRight = 'auto';
-
-    conteneurPhoto.appendChild(image);
-}
-
-// Code pour le carousel des personnages
-document.addEventListener('DOMContentLoaded', () => {
-    const carouselContainer = document.getElementById('carouselPersonnages');
-
-    for (let i = 1; i <= 48; i++) {
-        const slide = document.createElement('div');
-        slide.className = 'slide';
-        slide
