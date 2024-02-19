@@ -239,3 +239,28 @@ img {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.page-fruits-demons {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-fruits-demons footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+}
+.page-fruits-demons {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.page-fruits-demons .main-content {
+    flex: 1; 
+}
+
+.page-fruits-demons footer {
+    width: 100%;
+    text-align: center;
+}
